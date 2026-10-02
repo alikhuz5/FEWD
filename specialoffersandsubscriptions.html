@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bean Boutique - Special Offers And Subscriptions</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="styles.css" rel="stylesheet" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="main-nav">
+        <a class="nav-logo" href="homepage.html">Bean Boutique</a>
+        <button
+          class="nav-toggle"
+          type="button"
+          onclick="toggleMenu()"
+          aria-label="Toggle navigation"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="nav-menu" id="navMenu">
+          <ul class="nav-list">
+            <li><a class="nav-link" href="homepage.html">Home</a></li>
+            <li><a class="nav-link" href="coffeeselection.html">Coffee</a></li>
+            <li>
+              <a class="nav-link" href="brewingequipment.html">Equipment</a>
+            </li>
+            <li>
+              <a class="nav-link" href="eventsandworkshops.html">Events</a>
+            </li>
+            <li><a class="nav-link" href="shoppingcart.html">Cart <span id="cartCount">0</span></a></li>
+            <li>
+              <a
+                class="nav-link active"
+                href="specialoffersandsubscriptions.html"
+                >Offers</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="offers-section">
+        <h2>Current Promotions</h2>
+        <div class="offers-grid">
+          <div class="offer-card">
+            <span class="Offer-badge">20% OFF</span>
+            <h3>New Customer Discount</h3>
+            <p>
+              Use code <strong>BEAN20</strong> at checkout for your first order
+            </p>
+          </div>
+          <div class="offer-card">
+            <span class="Offer-badge">FREE SHIPPING</span>
+            <h3>Free delivery</h3>
+            <p>Free delivery on orders over KSH 5,000</p>
+          </div>
+          <div class="offer-card">
+            <span class="Offer-badge">BUNDLE</span>
+            <h3>Starter kit</h3>
+            <p>Get a bag of coffee + AeroPress for KSH 6,000 (save KSH 1200)</p>
+            <button onclick="addBundleToCart()">
+              <i class="fas fa-shopping-cart"></i> Buy Starter Kit
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="subscription-section">
+        <h2>Coffee subscriptions</h2>
+        <p>Never run out of fresh coffee. Choose your plan:</p>
+        <div class="subscription-grid">
+          <div class="subscription-card">
+            <h3>Basic</h3>
+            <p>KSH 1,800<span>/month</span></p>
+            <ul>
+              <li>250g single-origin coffee</li>
+              <li>Delivered monthly</li>
+              <li>Choose your roast</li>
+            </ul>
+            <button onclick="subscribe('Basic')">Subscribe</button>
+          </div>
+          <div class="subscription-card">
+            <span class="popular-badge">Most Popular</span>
+            <h3>Premium</h3>
+            <p>KSH 3,500<span>/month</span></p>
+            <ul>
+              <li>500g single-origin coffee</li>
+              <li>Delivered bi-weekly</li>
+              <li>Choose your roast</li>
+              <li>Free tasting notes booklet</li>
+            </ul>
+            <button onclick="subscribe('Premium')">Subscribe</button>
+          </div>
+          <div class="subscription-card">
+            <h3>Ultimate</h3>
+            <p>KSH 6,000<span>/month</span></p>
+            <ul>
+              <li>1kg single-origin coffee</li>
+              <li>Delivered weekly</li>
+              <li>Choose your roast</li>
+              <li>Free tasting notes booklet</li>
+              <li>Exclusive early access to new blends</li>
+              <li>Free brewing equipment guide</li>
+            </ul>
+            <button onclick="subscribe('Ultimate')">Subscribe</button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-col">
+          <h3>Bean Boutique</h3>
+          <p>123 Brew Lane, Coffee City</p>
+          <p>Email: hello@beanboutique.com</p>
+        </div>
+        <div class="footer-col">
+          <h4>Follow Us</h4>
+          <div class="social-links">
+            <a href="#" aria-label="Instagram"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" aria-label="Facebook"
+              ><i class="fab fa-facebook"></i
+            ></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Secure Shopping</h4>
+          <p class="secure-badge"><i class="fas fa-lock"></i> SSL Encrypted</p>
+        </div>
+      </div>
+      <p class="copyright">&copy; 2026 Bean Boutique. All rights reserved.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="javascript.js"></script>
+  </body>
+</html>

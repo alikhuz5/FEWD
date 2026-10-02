@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bean Boutique - Brewing Equipment</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="styles.css" rel="stylesheet" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="main-nav">
+        <a class="nav-logo" href="homepage.html">Bean Boutique</a>
+        <button
+          class="nav-toggle"
+          type="button"
+          onclick="toggleMenu()"
+          aria-label="Toggle navigation"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="nav-menu" id="navMenu">
+          <ul class="nav-list">
+            <li><a class="nav-link" href="homepage.html">Home</a></li>
+            <li><a class="nav-link" href="coffeeselection.html">Coffee</a></li>
+            <li>
+              <a class="nav-link active" href="brewingequipment.html"
+                >Equipment</a
+              >
+            </li>
+            <li>
+              <a class="nav-link" href="eventsandworkshops.html">Events</a>
+            </li>
+            <li><a class="nav-link" href="shoppingcart.html">Cart <span id="cartCount">0</span></a></li>
+            <li>
+              <a class="nav-link" href="specialoffersandsubscriptions.html"
+                >Offers</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!-- ===== PAGE HEADER ===== -->
+      <section class="page-header">
+        <h1>Premium Brewing Equipment</h1>
+        <p>
+          Elevate your coffee experience with our curated selection of brewing
+          gear
+        </p>
+      </section>
+
+      <!-- ===== EQUIPMENT GRID ===== -->
+      <section class="equipment-grid">
+        <div class="equipment-card">
+          <img
+            src="images/espresso-machine.jpg"
+            alt="Espresso machine for home brewing"
+          />
+          <h3>Espresso Machine</h3>
+          <p class="equipment-desc">
+            Commercial-grade espresso machine with built-in steam wand for
+            cafe-quality coffee at home.
+          </p>
+          <p class="usage-tips">
+            <strong>Usage Tip:</strong> Pre-heat your cups and use fresh beans
+            for the best crema. Clean the steam wand after each use.
+          </p>
+          <p class="price"><strong>KSH 45,000</strong></p>
+          <button
+            class="add-to-cart"
+            onclick="addToCart('Espresso Machine', 45000)"
+          >
+            <i class="fas fa-shopping-cart"></i> Add to Cart
+          </button>
+        </div>
+
+        <div class="equipment-card">
+          <img src="images/french-press.jpg" alt="Classic French press" />
+          <h3>French Press</h3>
+          <p class="equipment-desc">
+            Classic French press for rich, full-bodied coffee with minimal
+            effort. Perfect for beginners and purists alike.
+          </p>
+          <p class="usage-tips">
+            <strong>Usage Tip:</strong> Use coarse grind and steep for exactly 4
+            minutes for optimal extraction. Press slowly to avoid sediment.
+          </p>
+          <p class="price"><strong>KSH 3,500</strong></p>
+          <button class="add-to-cart" onclick="addToCart('French Press', 3500)">
+            <i class="fas fa-shopping-cart"></i> Add to Cart
+          </button>
+        </div>
+
+        <div class="equipment-card">
+          <img src="images/pour-over.jpg" alt="Ceramic pour-over dripper" />
+          <h3>Pour-over Dripper</h3>
+          <p class="equipment-desc">
+            Ceramic pour-over dripper for clean, bright cups with exceptional
+            clarity and flavor separation.
+          </p>
+          <p class="usage-tips">
+            <strong>Usage Tip:</strong> Use a gooseneck kettle for controlled
+            pouring. Pour in a spiral motion for even extraction.
+          </p>
+          <p class="price"><strong>KSH 2,200</strong></p>
+          <button
+            class="add-to-cart"
+            onclick="addToCart('Pour-over Dripper', 2200)"
+          >
+            <i class="fas fa-shopping-cart"></i> Add to Cart
+          </button>
+        </div>
+
+        <div class="equipment-card">
+          <img
+            src="images/electric-grinder.jpg"
+            alt="Electric burr coffee grinder"
+          />
+          <h3>Electric Burr Grinder</h3>
+          <p class="equipment-desc">
+            Stainless steel burr grinder with 50 precision grind settings for
+            perfect consistency from French press to espresso.
+          </p>
+          <p class="usage-tips">
+            <strong>Usage Tip:</strong> Grind just before brewing to preserve
+            aroma and freshness. Clean burrs weekly for best results.
+          </p>
+          <p class="price"><strong>KSH 8,500</strong></p>
+          <button
+            class="add-to-cart"
+            onclick="addToCart('Electric Burr Grinder', 8500)"
+          >
+            <i class="fas fa-shopping-cart"></i> Add to Cart
+          </button>
+        </div>
+
+        <div class="equipment-card">
+          <img src="images/hand-grinder.jpg" alt="Manual burr coffee grinder" />
+          <h3>Manual Burr Grinder</h3>
+          <p class="equipment-desc">
+            Portable manual burr grinder with ceramic burrs for quiet,
+            consistent grinding anywhere.
+          </p>
+          <p class="usage-tips">
+            <strong>Usage Tip:</strong> Grind for 30-45 seconds for a single
+            serving. Adjust the dial for different brew methods.
+          </p>
+          <p class="price"><strong>KSH 3,200</strong></p>
+          <button
+            class="add-to-cart"
+            onclick="addToCart('Manual Burr Grinder', 3200)"
+          >
+            <i class="fas fa-shopping-cart"></i> Add to Cart
+          </button>
+        </div>
+
+        <div class="equipment-card">
+          <img src="images/Chemex.jpg" alt="Chemex glass coffee brewer" />
+          <h3>Chemex Brewer</h3>
+          <p class="equipment-desc">
+            Iconic hourglass-shaped brewer for crystal-clear, tea-like coffee
+            with zero bitterness.
+          </p>
+          <p class="usage-tips">
+            <strong>Usage Tip:</strong> Use a medium-coarse grind and pour in a
+            slow, steady spiral. Use the handle to avoid burning your hands.
+          </p>
+          <p class="price"><strong>KSH 6,000</strong></p>
+          <button
+            class="add-to-cart"
+            onclick="addToCart('Chemex Brewer', 6000)"
+          >
+            <i class="fas fa-shopping-cart"></i> Add to Cart
+          </button>
+        </div>
+
+        <div class="equipment-card">
+          <img src="images/aeropress.jpg" alt="AeroPress coffee maker" />
+          <h3>Aeropress Brewer</h3>
+          <p class="equipment-desc">
+            Portable AeroPress for smooth, low-acidity coffee in under 2
+            minutes. Perfect for travel.
+          </p>
+          <p class="usage-tips">
+            <strong>Usage Tip:</strong> Invert the AeroPress for a longer
+            steeping time and richer flavor. Use fine grind for best results.
+          </p>
+          <p class="price"><strong>KSH 4,200</strong></p>
+          <button
+            class="add-to-cart"
+            onclick="addToCart('Aeropress Brewer', 4200)"
+          >
+            <i class="fas fa-shopping-cart"></i> Add to Cart
+          </button>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-col">
+          <h3>Bean Boutique</h3>
+          <p>123 Brew Lane, Coffee City</p>
+          <p>Email: hello@beanboutique.com</p>
+        </div>
+        <div class="footer-col">
+          <h4>Follow Us</h4>
+          <div class="social-links">
+            <a href="#" aria-label="Instagram"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" aria-label="Facebook"
+              ><i class="fab fa-facebook"></i
+            ></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Secure Shopping</h4>
+          <p class="secure-badge"><i class="fas fa-lock"></i> SSL Encrypted</p>
+        </div>
+      </div>
+      <p class="copyright">&copy; 2026 Bean Boutique. All rights reserved.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="javascript.js"></script>
+  </body>
+</html>

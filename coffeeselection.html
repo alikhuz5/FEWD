@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bean Boutique - Coffee Selection</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="styles.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body>
+  <header>
+    <nav class="main-nav">
+      <a class="nav-logo" href="homepage.html">Bean Boutique</a>
+      <button class="nav-toggle" type="button" onclick="toggleMenu()" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="nav-menu" id="navMenu">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="homepage.html">Home</a></li>
+          <li>
+            <a class="nav-link active" href="coffeeselection.html">Coffee</a>
+          </li>
+          <li>
+            <a class="nav-link" href="brewingequipment.html">Equipment</a>
+          </li>
+          <li>
+            <a class="nav-link" href="eventsandworkshops.html">Events</a>
+          </li>
+          <li>
+            <a class="nav-link" href="shoppingcart.html">Cart <span id="cartCount">0</span></a>
+          </li>
+          <a class="nav-link" href="specialoffersandsubscriptions.html">Offers</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <!-- ===== PAGE HEADER ===== -->
+    <section class="page-header">
+      <h1>Premium African Coffee Blends</h1>
+      <p>
+        Discover the rich, diverse flavors of Africa's finest coffee-growing
+        regions
+      </p>
+    </section>
+
+    <!-- ===== SEARCH & FILTER ===== -->
+    <section class="search-section">
+      <div class="search-container">
+        <i class="fas fa-search search-icon"></i>
+        <input type="text" id="coffeeSearch" placeholder="Search our African blends..." onkeyup="filterCoffees()" />
+        <button class="clear-btn" onclick="clearSearch()" aria-label="Clear search">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+
+      <div class="filter-container">
+        <span class="filter-label">Roast Level:</span>
+        <button class="filter-btn active" data-filter="all" onclick="filterByRoast('all')">
+          All
+        </button>
+        <button class="filter-btn" data-filter="light" onclick="filterByRoast('light')">
+          Light
+        </button>
+        <button class="filter-btn" data-filter="medium" onclick="filterByRoast('medium')">
+          Medium
+        </button>
+        <button class="filter-btn" data-filter="dark" onclick="filterByRoast('dark')">
+          Dark
+        </button>
+      </div>
+    </section>
+
+    <!-- ===== COFFEE GRID ===== -->
+    <section class="coffee-grid">
+      <div class="coffee-card" data-name="nyeri" data-roast="medium">
+        <img src="images/Generic-coffee.jpg" alt="Nyeri AA coffee beans" />
+        <h3>Nyeri AA</h3>
+        <div class="rating" data-rating="4.5">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> <i
+            class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+          <span>(4.5)</span>
+        </div>
+        <p class="origin">
+          <i class="fas fa-map-marker-alt"></i> Nyeri County, Kenya
+        </p>
+        <p class="tasting-notes">
+          <strong>Tasting Notes:</strong> Blackcurrant, dark chocolate,
+          grapefruit
+        </p>
+        <p class="brewing-method">
+          <strong>Best Brewed:</strong> Pour-over / V60
+        </p>
+        <p class="price"><strong>KSH 2,000</strong> / 250g</p>
+        <button class="add-to-cart" onclick="addToCart('Nyeri AA', 2000)">
+          <i class="fas fa-shopping-cart"></i> Add to Cart
+        </button>
+      </div>
+
+      <div class="coffee-card" data-name="yirgacheffe" data-roast="light">
+        <img src="images/Generic-coffee.jpg" alt="Ethiopia Yirgacheffe coffee beans" />
+        <h3>Yirgacheffe</h3>
+        <div class="rating" data-rating="4.8">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> <i
+            class="fas fa-star"></i><i class="fas fa-star"></i>
+          <span>(4.8)</span>
+        </div>
+        <p class="origin">
+          <i class="fas fa-map-marker-alt"></i> Yirgacheffe, Ethiopia
+        </p>
+        <p class="tasting-notes">
+          <strong>Tasting Notes:</strong> Jasmine, bergamot, lemon citrus,
+          tea-like body
+        </p>
+        <p class="brewing-method">
+          <strong>Best Brewed:</strong> Pour-over / Chemex
+        </p>
+        <p class="price"><strong>KSH 2,399</strong> / 250g</p>
+        <button class="add-to-cart" onclick="addToCart('Yirgacheffe', 2399)">
+          <i class="fas fa-shopping-cart"></i> Add to Cart
+        </button>
+      </div>
+
+      <div class="coffee-card" data-name="kivu-bourbon" data-roast="medium">
+        <img src="images/kivu-bourbon.jpg" alt="Rwanda Kivu Bourbon coffee beans" />
+        <h3>Kivu Bourbon</h3>
+        <div class="rating" data-rating="4.6">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> <i
+            class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+          <span>(4.6)</span>
+        </div>
+        <p class="origin">
+          <i class="fas fa-map-marker-alt"></i> Lake Kivu, Rwanda
+        </p>
+        <p class="tasting-notes">
+          <strong>Tasting Notes:</strong> White chocolate, lemon, orange
+          blossom, caramel
+        </p>
+        <p class="brewing-method">
+          <strong>Best Brewed:</strong> Espresso / Pour-over
+        </p>
+        <p class="price"><strong>KSH 2,699</strong> / 250g</p>
+        <button class="add-to-cart" onclick="addToCart('Kivu Bourbon', 2699)">
+          <i class="fas fa-shopping-cart"></i> Add to Cart
+        </button>
+      </div>
+
+      <div class="coffee-card" data-name="kilimanjaro" data-roast="medium">
+        <img src="images/kilimanjaro-peaberry.jpg" alt="Tanzania Kilimanjaro Peaberry coffee beans" />
+        <h3>Kilimanjaro Peaberry</h3>
+        <div class="rating" data-rating="4.4">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> <i
+            class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+          <span>(4.4)</span>
+        </div>
+        <p class="origin">
+          <i class="fas fa-map-marker-alt"></i> Mount Kilimanjaro, Tanzania
+        </p>
+        <p class="tasting-notes">
+          <strong>Tasting Notes:</strong> Plum, raspberry, soft red apple,
+          smooth chocolate
+        </p>
+        <p class="brewing-method">
+          <strong>Best Brewed:</strong> Pour-over / Drip
+        </p>
+        <p class="price"><strong>KSH 2,849</strong> / 250g</p>
+        <button class="add-to-cart" onclick="addToCart('Kilimanjaro Peaberry', 2849)">
+          <i class="fas fa-shopping-cart"></i> Add to Cart
+        </button>
+      </div>
+
+      <div class="coffee-card" data-name="kayanza" data-roast="light">
+        <img src="images/kayanza.jpg" alt="Burundi Kayanza coffee beans" />
+        <h3>Kayanza</h3>
+        <div class="rating" data-rating="4.3">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> <i
+            class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+          <span>(4.3)</span>
+        </div>
+        <p class="origin">
+          <i class="fas fa-map-marker-alt"></i> Kayanza, Burundi
+        </p>
+        <p class="tasting-notes">
+          <strong>Tasting Notes:</strong> Aromatic brightness, floral, sweet
+          citrus
+        </p>
+        <p class="brewing-method">
+          <strong>Best Brewed:</strong> Pour-over / Filter
+        </p>
+        <p class="price"><strong>KSH 2,474</strong> / 250g</p>
+        <button class="add-to-cart" onclick="addToCart('Kayanza', 2474)">
+          <i class="fas fa-shopping-cart"></i> Add to Cart
+        </button>
+      </div>
+
+      <div class="coffee-card" data-name="drugar" data-roast="medium">
+        <img src="images/drugar.jpg" alt="Uganda Drugar coffee beans" />
+        <h3>Drugar</h3>
+        <div class="rating" data-rating="4.2">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> <i
+            class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+          <span>(4.2)</span>
+        </div>
+        <p class="origin"><i class="fas fa-map-marker-alt"></i> Uganda</p>
+        <p class="tasting-notes">
+          <strong>Tasting Notes:</strong> Balanced, smooth, chocolatey
+          undertones
+        </p>
+        <p class="brewing-method">
+          <strong>Best Brewed:</strong> Drip / Pour-over
+        </p>
+        <p class="price"><strong>KSH 2,249</strong> / 250g</p>
+        <button class="add-to-cart" onclick="addToCart('Drugar', 2249)">
+          <i class="fas fa-shopping-cart"></i> Add to Cart
+        </button>
+      </div>
+    </section>
+
+    <!-- ===== NO RESULTS MESSAGE ===== -->
+    <div id="noResults" class="no-results">
+      <i class="fas fa-coffee"></i>
+      <h3>No African blends found</h3>
+      <p>Try adjusting your search or roast filter</p>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-col">
+        <h3>Bean Boutique</h3>
+        <p>123 Brew Lane, Coffee City</p>
+        <p>Email: hello@beanboutique.com</p>
+      </div>
+      <div class="footer-col">
+        <h4>Follow Us</h4>
+        <div class="social-links">
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Secure Shopping</h4>
+        <p class="secure-badge"><i class="fas fa-lock"></i> SSL Encrypted</p>
+      </div>
+    </div>
+    <p class="copyright">&copy; 2026 Bean Boutique. All rights reserved.</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="javascript.js"></script>
+</body>
+
+</html>
