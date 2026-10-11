@@ -261,3 +261,17 @@ function submitRegistration(event) {
     return false;
 }
 /* #endregion */
+
+/* #region 8. Modal functionality */
+function handleEmailSignup(event) {
+    event.preventDefault();
+    var email = document.getElementById('emailInput').value.trim();
+    alert('Thank you for signing up!\n\nWe\'ll send your 15% discount code to:\n' + email);
+    document.getElementById('emailSignup').reset();
+
+    // Close the modal
+    var modalEl = document.getElementById('discountModal');
+    var modal = bootstrap.Modal.getInstance(modalEl);
+    if (modal) modal.hide();
+}
+/* #endregion */

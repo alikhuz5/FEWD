@@ -453,6 +453,17 @@
 }
 
 /* Coffee grid */
+
+.grid-heading {
+    font-family: Georgia, serif;
+    color: #2c1810;
+    font-size: 26px;
+    text-align: center;
+    margin: 0 auto 30px;
+    max-width: 1100px;
+    padding: 0 20px;
+}
+
 .coffee-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -595,7 +606,7 @@
     border-radius: 8px;
     margin-bottom: 15px;
 }
-.equipment-card h3 {
+.equipment-card h2 {
     font-family: Georgia, serif;
     color: #2c1810;
     font-size: 20px;
@@ -658,7 +669,7 @@
     padding: 0 20px;
 }
 
-.offers-section h2 {
+.offers-section h1 {
     font-family: Georgia, serif;
     color: #2c1810;
     font-size: 30px;
@@ -704,7 +715,7 @@
     text-transform: uppercase;
 }
 
-.offer-card h3 {
+.offer-card h2 {
     font-family: Georgia, serif;
     color: #2c1810;
     font-size: 20px;
@@ -915,7 +926,7 @@
     border-radius: 8px;
     margin-bottom: 15px;
 }
-.event-card h3 {
+.event-card h2 {
     font-family: Georgia, serif;
     color: #2c1810;
     font-size: 20px;
@@ -1043,6 +1054,14 @@
 /* #endregion */
 
 /* #region Cart Page */
+
+.page-header h2 {
+    font-family: Arial, sans-serif;
+    font-weight: normal;
+    color: #5a4a3a;
+    font-size: 16px;
+    margin: 0;
+}
 
 .cart-section {
     max-width: 900px;

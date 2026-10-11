@@ -4,8 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bean Boutique - Home</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
-    <link href="styles.css" rel="stylesheet"/>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="styles.css" rel="stylesheet" />
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
       rel="stylesheet"
@@ -14,8 +17,13 @@
   <body>
     <header>
       <nav class="main-nav">
-        <a class="nav-logo" href="homepage.html">Bean Boutique</a>
-        <button class="nav-toggle" type="button" onclick="toggleMenu()" aria-label="Toggle navigation">
+        <a class="nav-logo" href="homepage.html"><h1>Bean Boutique</h1></a>
+        <button
+          class="nav-toggle"
+          type="button"
+          onclick="toggleMenu()"
+          aria-label="Toggle navigation"
+        >
           <i class="fas fa-bars"></i>
         </button>
         <div class="nav-menu" id="navMenu">
@@ -28,7 +36,11 @@
             <li>
               <a class="nav-link" href="eventsandworkshops.html">Events</a>
             </li>
-            <li><a class="nav-link" href="shoppingcart.html">Cart <span id="cartCount">0</span></a></li>
+            <li>
+              <a class="nav-link" href="shoppingcart.html"
+                >Cart <span id="cartCount">0</span></a
+              >
+            </li>
             <li>
               <a class="nav-link" href="specialoffersandsubscriptions.html"
                 >Offers</a
@@ -66,10 +78,29 @@
               alt="Fresh roasted coffee beans"
             />
             <div class="carousel-caption d-none d-md-block">
-              <h5>Discover our single-origin blends</h5>
+              <h2>Discover our single-origin blends</h2>
             </div>
           </div>
-          <!-- remaining slides -->
+          <div class="carousel-item">
+            <img
+              src="images/espresso-machine.jpg"
+              class="d-block w-100"
+              alt="Brewing equipment showcase"
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h2>Shop premium brewing gear</h2>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="images/coffee-workshop.jpg"
+              class="d-block w-100"
+              alt="Coffee tasting workshop"
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h2>Join our upcoming workshops</h2>
+            </div>
+          </div>
         </div>
         <button
           class="carousel-control-prev"
@@ -105,9 +136,13 @@
         <h2 class="section-title">Find Us</h2>
         <div class="map-wrapper">
           <iframe
-            src="images/placeholder.jpg"
-            allowfullscreen
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7977.698265507826!2d36.808182994614654!3d-1.2629140186410466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f17346a781a23%3A0x6af4ab1440bac14c!2sCOFFEE%20SHOP!5e0!3m2!1sen!2ske!4v1791694640950!5m2!1sen!2ske"
+            width="400"
+            height="300"
+            style="border: 0"
+            allowfullscreen=""
             loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"
           ></iframe>
         </div>
       </section>
@@ -115,15 +150,16 @@
         class="modal fade"
         id="discountModal"
         tabindex="-1"
+        role="dialog"
         aria-labelledby="discountModalLabel"
         aria-hidden="true"
       >
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="discountModalLabel">
+              <h3 class="modal-title" id="discountModalLabel">
                 Welcome to Bean Boutique!
-              </h5>
+              </h3>
               <button
                 type="button"
                 class="modal-close"
@@ -138,7 +174,7 @@
                 Sign up for our newsletter and get <strong>15% off</strong> your
                 first order.
               </p>
-              <form id="emailSignup" action="#" method="post">
+              <form id="emailSignup" onsubmit="handleEmailSignup(event)">
                 <label for="emailInput">Email Address:</label>
                 <input
                   type="email"
